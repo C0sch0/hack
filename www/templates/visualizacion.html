@@ -1,0 +1,57 @@
+<ion-view view-title="Vista por comuna">
+  <ion-content>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-8" id="map" style="height: 400px"></div>
+      
+      <div class="col-md-4">
+
+        <h3>Selecciona los filtros</h3>
+
+        <label> Selecciona intención del Tweet </label>
+        <div class="form-group inline">
+          <label>
+            <input type="radio" name="tipo" id="filter_reclamo" value="0" onchange="onFilterChange()"> Reclamo
+          </label>
+          <label>
+            <input type="radio" name="tipo" id="filter_satisfaccion" value="1" onchange="onFilterChange()"> Satisfacción
+          </label>
+          <label>
+            <input type="radio" name="tipo" id="filter_todos" value="todos" onchange="onFilterChange()" checked> Todos
+          </label>
+
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-group inline" id="filtro_empresa"></div>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="form-group inline" id="filtro_topicos"></div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>Tweets por empresa:</h4>
+        <div class="row" id="tweets_empresa_tiempo">
+          <svg></svg>
+        </div>
+        <h4>Tweets por empresa y características:</h4>
+        <div class="row" id="tweets_empresas_tiempo_topico"></div>
+      </div>
+    </div>
+
+    <div class="row" style="display:none">
+        <div class="col-xs-12"> <!-- Gráfico de cantidad -->
+            <h4>Cantidad</h4>
+            <div id="chart-date" class="dc-chart">
+            </div>
+        </div>
+    </div>
+    
+  </ion-content>
+</ion-view>

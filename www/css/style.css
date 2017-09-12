@@ -1,0 +1,38 @@
+/* Empty. Add your own CSS if you like */
+div.dc-chart {
+  float: none;
+}
+
+div.row {
+  display:block;
+  width: auto;
+}
+
+
+.jumbotron{
+    height: 100vh;
+
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+#filter_topico{
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.form-group.inline > label {
+  margin-right: 5px;
+  padding: 2px;
+}
+
+.form-group.inline > label > input {
+  margin: 3px;
+}

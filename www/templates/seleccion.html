@@ -1,0 +1,72 @@
+<ion-view cache-view="false" view-title="Seleccione su sector">
+  <ion-content>
+
+    <div class="container">
+
+      <div class="row padding">
+        <div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
+          <button ng-click="getLocation()" class="button button-block icon-left ion-location button-positive" ng-class="{'button-balanced': ubicacion_selected == 'geo', 'button-positive': ubicacion_selected != 'geo'}">
+            Utilizar mi ubicación
+          </button>
+        </div>
+      </div>
+
+      <div class="row padding">
+        <div class="col-xs-12 text-center">
+          ó
+        </div>
+      </div>
+
+      <div class="row padding">
+        <div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
+          <label class="item item-input item-select item-positive" ng-class="{'item-balanced': ubicacion_selected == 'comuna', 'item-positive': ubicacion_selected != 'comuna'}">
+            <div class="input-label">
+              Seleccionar Comuna
+            </div>
+            <select ng-model="formData.ubicacion" ng-change="changeLocation()">
+              <option value="1">San Joaquín</option>
+              <option value="2">Macul</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="row padding">
+        <div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
+          <button ng-click="selectCiudad()" class="button button-block button-positive" ng-class="{'button-balanced': ubicacion_selected == 'ciudad', 'button-positive': ubicacion_selected != 'ciudad'}">
+            Ver en todo santiago
+          </button>
+        </div>
+      </div>
+
+
+      <div class="row padding">
+        <div class="col-xs-12 text-center">
+          <hr>
+        </div>
+      </div>
+
+      <div class="row padding">
+        <div class="col-xs-6 col-sm-3">
+          <ion-radio ng-model="formData.servicio" value="internet">Internet</ion-radio>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ion-radio ng-change="betaVersion(this)" ng-model="formData.servicio" value="telefonia">Telefonía</ion-radio>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ion-radio ng-click="betaVersion(this)" ng-model="formData.servicio" value="cable">TV Cable</ion-radio>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <ion-radio ng-click="betaVersion(this)" ng-model="formData.servicio" value="gas">Gas</ion-radio>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3 text-center">
+          <a ng-click="ver()" class="button button-block icon-right ion-chevron-right button-calm">Ver</a>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
